@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MistriG - Connecting Skilled Workers with Opportunities</title>
+    <link rel="stylesheet" href="ffstyle.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">
+                
+                <img class="ic" src="/src/Images/mg.png" alt="MistriG" >
+                MistriG
+            </a>
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/src/pages/find-work.html">Find Work</a>
+            <a href="/src/pages/hire-workers.html">Hire Workers</a>
+            <a href="/src/pages/join.html" class="btn-primary">Join Now</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <p class="loading-text">Finding professionals near you<span class="dots">...</span></p>
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <p id="status">Please allow location access...</p>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, error);
+            } else {
+                document.getElementById("status").innerText = "Geolocation is not supported by your browser.";
+            }
+        }
+
+        function success(position) {
+            document.getElementById("status").innerText = "Location found! Redirecting...";
+            setTimeout(() => {
+                console.log("We are Temp")
+                <!-- window.location.href = "your-target-page.html"; --> // Change to your actual destination 
+            }, 3000);
+        }
+
+        document.getElementById("searchBtn").addEventListener("click", function() {
+            let loadingMsg = document.getElementById("loadingMsg");
+            let resultMsg = document.getElementById("resultMsg");
+        
+            loadingMsg.classList.remove("hidden");
+            resultMsg.classList.add("hidden");
+        
+            setTimeout(() => {
+                loadingMsg.classList.add("hidden");
+                resultMsg.classList.remove("hidden");
+            }, 3000); // 3 seconds delay
+        });
+        
+        function error() {
+            document.getElementById("status").innerText = "Location access denied. Unable to find nearby professionals.";
+        }
+
+        window.onload = getLocation;
+    </script>
+
+</body>
+</html>

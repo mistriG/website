@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Workers - MistriG</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/">
+                
+                <img class="ic" src="/src/Images/mg.png" alt="MistriG" >
+                MistriG
+            </a>
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/src/pages/find-work.html">Find Work</a>
+            <a href="/src/pages/hire-workers.html">Hire Workers</a>
+            <a href="/src/pages/join.html" class="btn-primary">Join Now</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="hire-workers-hero">
+            <h1>Find Skilled Professionals</h1>
+            <p>Connect with qualified workers for your projects</p>
+        </section>
+
+        <!-- Location Permission Modal -->
+        <div id="locationModal" class="modal">
+            <div class="modal-content">
+                <div id="locationAnimation" class="animation-container"></div>
+                <h2>Find Workers Nearby</h2>
+                <p>Allow location access to find skilled professionals in your area.</p>
+                <div class="modal-buttons">
+                    <button class="btn-primary" id="allowLocation">Allow Location</button>
+                    <button class="btn-secondary" id="denyLocation">Not Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <!-- Existing Services -->
+
+            <div class="service-card" data-profession="plumber">
+                <img src="/src/Images/plumber.jpeg" alt="Plumber">
+                <h3>Plumbers</h3>
+                <p>Professional plumbing services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Plumbers</a>
+            </div>
+            <div class="service-card" data-profession="electrician">
+                <img src="/src/Images/electrician.jpeg" alt="Electrician">
+                <h3>Electricians</h3>
+                <p>Licensed electrical experts</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Electricians</a>
+            </div>
+            <div class="service-card" data-profession="carpenter">
+                <img src="/src/Images/carpentry.jpg" alt="Carpenter">
+                <h3>Carpenters</h3>
+                <p>Skilled woodworking professionals</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Carpenters</a>
+            </div>
+            <div class="service-card" data-profession="painter">
+                <img src="/src/Images/painter.jpeg" alt="Painter">
+                <h3>Painters</h3>
+                <p>Professional painting services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Painters</a>
+            </div>
+            <div class="service-card" data-profession="mason">
+                <img src="/src/Images/mason.jpeg" alt="Mason">
+                <h3>Masons</h3>
+                <p>Expert masonry services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Masons</a>
+            </div>
+            <div class="service-card" data-profession="cleaner">
+                <img src="/src/Images/cleaning.jpeg" alt="Cleaner">
+                <h3>Cleaners</h3>
+                <p>Professional cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Cleaners</a>
+            </div>
+            <div class="service-card" data-profession="confectioner">
+                <img src="/src/Images/confectioner.jpg" alt="Confectioner">
+                <h3>Confectioners</h3>
+                <p>Skilled confectionery experts</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Confectioners</a>
+            </div>
+            <div class="service-card" data-profession="labor">
+                <img src="/src/Images/labour.jpeg" alt="General Labor">
+                <h3>General Labor</h3>
+                <p>Reliable construction workers</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Workers</a>
+            </div>
+            <div class="service-card" data-profession="designer">
+                <img src="/src/Images/inter.jpeg" alt="Interior Designer">
+                <h3>Interior Designers</h3>
+                <p>Creative design professionals</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Designers</a>
+            </div>
+
+            <!-- New Services -->
+            <div class="service-card" data-profession="welder">
+                <img src="/src/Images/Welders.jpeg" alt="Welder">
+                <h3>Welders</h3>
+                <p>Expert metal welding services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Welders</a>
+            </div>
+            <div class="service-card" data-profession="roofer">
+                <img src="/src/Images/Roofers.jpg" alt="Roofer">
+                <h3>Roofers</h3>
+                <p>Professional roofing services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Roofers</a>
+            </div>
+            <div class="service-card" data-profession="tile-fitter">
+                <img src="/src/Images/Tile Fitters.jpeg" alt="Tile Fitter">
+                <h3>Tile Fitters</h3>
+                <p>Expert tile installation services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Tile Fitters</a>
+            </div>
+            <div class="service-card" data-profession="architect">
+                <img src="/src/Images/Architects.png" alt="Architect">
+                <h3>Architects</h3>
+                <p>Professional building design services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Architects</a>
+            </div>
+            <div class="service-card" data-profession="glass-installer">
+                <img src="/src/Images/Glass Installers.jpeg" alt="Glass Installer">
+                <h3>Glass Installers</h3>
+                <p>Expert glass fitting services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Glass Installers</a>
+            </div>
+            <div class="service-card" data-profession="false-ceiling">
+                <img src="/src/Images/False Ceiling Experts.jpg" alt="False Ceiling Expert">
+                <h3>False Ceiling Experts</h3>
+                <p>Professional false ceiling installation</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Experts</a>
+            </div>
+            <div class="service-card" data-profession="waterproofing">
+                <img src="/src/Images/Waterproofing Specialists.jpeg" alt="Waterproofing Specialist">
+                <h3>Waterproofing Specialists</h3>
+                <p>Effective waterproofing solutions</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Specialists</a>
+            </div>
+            <div class="service-card" data-profession="bricklayer">
+                <img src="/src/Images/Bricklayers.jpeg" alt="Bricklayer">
+                <h3>Bricklayers</h3>
+                <p>Skilled brickwork services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Bricklayers</a>
+            </div>
+            <div class="service-card" data-profession="land-surveyor">
+                <img src="/src/Images/Land Surveyors.jpeg" alt="Land Surveyor">
+                <h3>Land Surveyors</h3>
+                <p>Accurate land measurement services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Surveyors</a>
+            </div>
+            <div class="service-card" data-profession="ac-technician">
+                <img src="/src/Images/AC Technicians.jpg" alt="AC Technician">
+                <h3>AC Technicians</h3>
+                <p>Expert AC repair and maintenance</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="refrigerator-mechanic">
+                <img src="/src/Images/Refrigerator Mechanics.jpeg" alt="Refrigerator Mechanic">
+                <h3>Refrigerator Mechanics</h3>
+                <p>Professional refrigerator repair services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Mechanics</a>
+            </div>
+            <div class="service-card" data-profession="washing-machine-repair">
+                <img src="/src/Images/Washing Machine Repair.png" alt="Washing Machine Repair Expert">
+                <h3>Washing Machine Repair</h3>
+                <p>Expert repair services for washing machines</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Experts</a>
+            </div>
+            <div class="service-card" data-profession="mobile-repair">
+                <img src="/src/Images/Mobile Repair Technicians.jpg" alt="Mobile Repair Technician">
+                <h3>Mobile Repair Technicians</h3>
+                <p>Professional smartphone repair services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="laptop-repair">
+                <img src="/src/Images/LaptopComputer Technicians.jpg" alt="Laptop/Computer Technician">
+                <h3>Laptop/Computer Technicians</h3>
+                <p>Expert repair services for laptops and computers</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="cctv-installer">
+                <img src="/src/Images/CCTV Installers.jpg" alt="CCTV Installer">
+                <h3>CCTV Installers</h3>
+                <p>Professional security camera installation</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Installers</a>
+            </div>
+            <div class="service-card" data-profession="water-purifier">
+                <img src="/src/Images/Water Purifier Technicians.jpg" alt="Water Purifier Technician">
+                <h3>Water Purifier Technicians</h3>
+                <p>Expert installation and maintenance of water purifiers</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="generator-mechanic">
+                <img src="/src/Images/Generator Mechanics.jpeg" alt="Generator Mechanic">
+                <h3>Generator Mechanics</h3>
+                <p>Professional generator repair and maintenance</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Mechanics</a>
+            </div>
+            <div class="service-card" data-profession="car-mechanic">
+                <img src="/src/Images/Car Mechanics.jpeg" alt="Car Mechanic">
+                <h3>Car Mechanics</h3>
+                <p>Expert car repair and maintenance services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Mechanics</a>
+            </div>
+            <div class="service-card" data-profession="bike-mechanic">
+                <img src="/src/Images/Bike Mechanics.jpg" alt="Bike Mechanic">
+                <h3>Bike Mechanics</h3>
+                <p>Professional motorcycle repair services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Mechanics</a>
+            </div>
+            <div class="service-card" data-profession="elevator-maintenance">
+                <img src="/src/Images/Elevator Technicians.jpg" alt="Elevator Maintenance Technician">
+                <h3>Elevator Technicians</h3>
+                <p>Expert elevator maintenance and repair</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="solar-panel-installer">
+                <img src="/src/Images/Solar Panel Installers.jpeg" alt="Solar Panel Installer">
+                <h3>Solar Panel Installers</h3>
+                <p>Professional solar energy system installation</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Installers</a>
+            </div>
+            <div class="service-card" data-profession="inverter-repair">
+                <img src="/src/Images/Inverter & Battery Repair.jpg" alt="Inverter & Battery Repair">
+                <h3>Inverter & Battery Repair</h3>
+                <p>Expert repair and maintenance services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="tv-repair">
+                <img src="/src/Images/TV Repair Technicians.jpeg" alt="TV Repair Technician">
+                <h3>TV Repair Technicians</h3>
+                <p>Professional TV repair services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="microwave-repair">
+                <img src="/src/Images/Microwave Repair Technicians.jpeg" alt="Microwave Oven Technician">
+                <h3>Microwave Repair Technicians</h3>
+                <p>Expert microwave repair services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Technicians</a>
+            </div>
+            <div class="service-card" data-profession="pest-control">
+                <img src="/src/Images/Pest Control Experts.jpeg" alt="Pest Control Expert">
+                <h3>Pest Control Experts</h3>
+                <p>Effective pest removal and prevention</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Experts</a>
+            </div>
+            <div class="service-card" data-profession="sofa-cleaner">
+                <img src="/src/Images/Sofa & Carpet Cleaners.jpeg" alt="Sofa & Carpet Cleaner">
+                <h3>Sofa & Carpet Cleaners</h3>
+                <p>Professional upholstery cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Cleaners</a>
+            </div>
+            <div class="service-card" data-profession="gardener">
+                <img src="/src/Images/Gardeners.jpeg" alt="Gardener">
+                <h3>Gardeners</h3>
+                <p>Expert lawn care and landscaping services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Gardeners</a>
+            </div>
+            <div class="service-card" data-profession="chimney-cleaner">
+                <img src="/src/Images/Chimney Cleaners.jpg" alt="Chimney Cleaner">
+                <h3>Chimney Cleaners</h3>
+                <p>Professional chimney cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Cleaners</a>
+            </div>
+            <div class="service-card" data-profession="septic-tank-cleaner">
+                <img src="/src/Images/Septic Tank Cleaners.jpeg" alt="Septic Tank Cleaner">
+                <h3>Septic Tank Cleaners</h3>
+                <p>Professional septic tank cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Cleaners</a>
+            </div>
+            <div class="service-card" data-profession="laundry">
+                <img src="/src/Images/Laundry Services.jpeg" alt="Laundry & Dry Cleaner">
+                <h3>Laundry Services</h3>
+                <p>Professional laundry and dry cleaning</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Services</a>
+            </div>
+            <div class="service-card" data-profession="deep-cleaning">
+                <img src="/src/Images/Deep Cleaning Experts.jpeg" alt="House Deep Cleaning Expert">
+                <h3>Deep Cleaning Experts</h3>
+                <p>Comprehensive cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Experts</a>
+            </div>
+            <div class="service-card" data-profession="aquarium-cleaner">
+                <img src="/src/Images/Aquarium Cleaners.jpeg" alt="Aquarium Cleaner">
+                <h3>Aquarium Cleaners</h3>
+                <p>Professional aquarium cleaning services</p>
+                <a href="/src/pages/find-professionals.html" class="btn-primary">Find Cleaners</a>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                    </path>
+                </svg>
+                MistriG
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MistriG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>
